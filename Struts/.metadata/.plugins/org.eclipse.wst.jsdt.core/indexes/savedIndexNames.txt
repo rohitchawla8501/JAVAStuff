@@ -1,0 +1,2 @@
+INDEX VERSION 1.122+Z:\Struts\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+509167437.index

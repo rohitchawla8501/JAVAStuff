@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>LOGIN</title>
+</head>
+<body>
+	<script>
+	function validateuser()
+	{
+		
+		var password=document.getElementById("passwd").value;
+	      var user= new String(document.getElementById("user").value);
+	     
+	      if (user.toLowerCase() =="rohit" && password=="rohit")
+			{
+			alert("LOGIN SUCCESSFUL");
+			
+			}
+	
+	
+	}
+	 
+	function changecolour()
+	{
+		var user=document.getElementById("user")
+		user.style.background = "red";
+		
+	}
+	function changecolour1()
+	{
+		var user=document.getElementById("passwd")
+		user.style.background = "red";
+		
+	}
+	function resetcolour(currfield)
+	{
+		currfield.style.background="white";
+	}
+	
+	</script>
+	<h1 style="font-size: 300%">
+		<center>LOGIN PAGE</center>
+	</h1>
+	<CENTER>
+		<table>
+			<tr height="100">
+				<td>USERNAME</td>
+				<td><form>
+						<input type="text" name="text" id="user" onfocus="changecolour()" onblur="resetcolour(this)">
+					</form>
+			</tr>
+			<tr height="100">
+				<td>PASSWORD</td>
+				<td><form>
+						<input type="password" name="password" id ="passwd" onfocus="changecolour1()" onblur="resetcolour(this)">
+					</form>
+			</tr>
+		<tr> <td width="100"><input type="button" value="login" id="b1" onclick="validateuser()"></td>
+		     <td><a href="fromdemo.html">New User?</a></td>
+		</tr>
+		
+		</table>
+	</CENTER>
+	
+</body>
+
+</html>

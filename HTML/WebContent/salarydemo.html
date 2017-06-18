@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Salary</title>
+</head>
+<body>
+	<h1>
+		<center>SALARY FORM</center>
+	</h1>
+	<script>
+		
+	
+	
+	
+	
+	function calculate() {
+			var basic =document.f1.basic.value;// document.getElementById("basic").value;
+			
+			
+			
+			if (isNaN(basic)) {
+				alert("Please enter only numbers")
+				reset();
+			} else {
+				document.f1.basic.style.color="red";
+				var hra = 1.20 * parseFloat(basic);
+				var da = 0.10 * parseFloat(basic);
+				var ha = 0.05 * parseFloat(basic);
+				var pf1 = 0.07 * parseFloat(basic);
+				var pf=Math.round(pf1);
+				var grat = 0.06 * parseFloat(basic);
+				
+				
+				/* document.getElementById("hra").value = hra;
+				document.getElementById("da").value = da;
+				document.getElementById("ha").value = ha;
+				document.getElementById("pf").value = pf;
+				document.getElementById("grat").value = grat; */
+				
+				
+				document.f1.hra.value=hra;//DOM
+				document.f1.da.value=da;
+				document.f1.ha.value=ha;
+				document.f1.pf.value=pf;
+				document.f1.grat.value=grat;
+				var gross = parseFloat(basic) + hra + da + ha;
+				document.getElementById("gross").value = gross;
+				var net = gross - pf - grat;
+				document.getElementById("net").value = net;
+			}
+		}
+		function reset() {
+			document.getElementById("basic").value = " ";
+			document.getElementById("hra").value = " ";
+			document.getElementById("da").value = "";
+			document.getElementById("ha").value = "";
+			document.getElementById("pf").value = "";
+			document.getElementById("grat").value = "";
+			document.getElementById("gross").value = "";
+			document.getElementById("net").value = "";
+		}
+		function vali() {
+			var basic = document.getElementById("basic").value;
+			if (isNaN(basic)) {
+				alert("Please enter only numbers")
+				reset();
+			}
+		}
+	</script>
+	<table>
+		<form name="f1">
+			<tr>
+
+				<td>BASIC SAL</td>
+				<td><input type="text" id="basic" name="basic"
+					onkeydown="vali()"></td>
+
+			</tr>
+
+			<tr>
+
+				<td>HRA</td>
+				<td><input type="text" id="hra" name="hra" readonly></td>
+
+			</tr>
+		<tr>
+
+			<td>DA</td>
+			<td><input type="text" id="da" name="da" readonly></td>
+
+		</tr>
+		<tr>
+
+			<td>HA</td>
+			<td><input type="text" id="ha" name="ha" readonly></td>
+
+		</tr>
+
+		<tr>
+
+			<td>PF</td>
+			<td><input type="text" id="pf" name="pf" readonly></td>
+
+		</tr>
+		<tr>
+
+			<td>GRATUITY</td>
+			<td><input type="text" id="grat" name="grat" readonly></td>
+
+		</tr>
+		<tr>
+
+			<td>GROSS SAL</td>
+			<td><input type="text" id="gross" readonly></td>
+
+		</tr>
+		<tr>
+
+			<td>NET SAL</td>
+			<td><input type="text" id="net" readonly></td>
+
+		</tr>
+		<tr>
+
+			<td><input type="button" value="calculate" onclick="calculate()"></td>
+
+			<td><input type="button" value="reset" onclick="reset()"></td>
+		</tr>
+
+		</form>
+	</table>
+</body>
+</html>

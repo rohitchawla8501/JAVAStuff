@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE studentdb
+[<!ELEMENT student (NAME,MARKS)>
+<!--  <!ATTLIST student ROLL  ID #REQUIRED > -->
+ <!ATTLIST student ROLL  (AB121|AB122|AB125|AB126)  "AB122" >
+ <!ATTLIST MARKS CLASS CDATA #FIXED "B.E">
+<!ELEMENT NAME (#PCDATA)>
+<!ELEMENT MARKS (#PCDATA)>
+
+
+<!ELEMENT CLASS (#PCDATA)>
+]>
+
+
+
+<studentdb>
+	<student ROLL="AB121" >
+		
+		<NAME >Abshay</NAME>
+		<MARKS  >95</MARKS>
+		
+       
+	</student>
+	<student ROLL="AB122" >
+		
+		<NAME >Rohit</NAME>
+		<MARKS>96</MARKS>
+		
+
+	</student>
+	<student  ROLL="AB125" >
+		
+		<NAME>Abhijit</NAME>
+		<MARKS>15</MARKS>
+		
+
+	</student>
+	<student  ROLL="AB126">
+		
+		<NAME >Vibhi</NAME>
+		<MARKS>255</MARKS>
+		
+
+	</student>
+	</studentdb>

@@ -1,0 +1,5 @@
+INDEX VERSION 1.126
+Z:\Struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2459447006.index
+\Struts_demo1\src
+Z:\Struts\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3166653021.index
+\Struts_Demo\src
